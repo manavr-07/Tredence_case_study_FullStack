@@ -53,6 +53,12 @@ src/
 - HTML: 1.1%
 - JavaScript: 0.5%
 
+
+## What I Would Add With More Time
+**Cross-browser drag fix** — Node dragging on canvas works on Safari and Edge; 
+  Chrome has a known issue with ReactFlow's drag handling that requires upgrading 
+  to ReactFlow v12 which uses a different internal drag system.
+
 ## License
 
 This project is part of the Tredence case study.
