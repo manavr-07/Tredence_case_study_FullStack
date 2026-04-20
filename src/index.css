@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; width: 100%; overflow: hidden; }
+
+.react-flow__controls button {
+  background: #1c1f2a !important;
+  border-color: #2a2d3a !important;
+  color: #9ca3af !important;
+  fill: #9ca3af !important;
+}
+.react-flow__controls button:hover {
+  background: #2a2d3a !important;
+  fill: #e8eaf0 !important;
+}
+.react-flow__edge-path { stroke: #f97316; stroke-width: 2; }
+.react-flow__edge.selected .react-flow__edge-path { stroke: #a855f7; }
+.react-flow__connection-path { stroke: #f97316; stroke-width: 2; }
+.react-flow__handle { transition: transform 0.15s ease; }
+.react-flow__handle:hover { transform: scale(1.4); }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2d3a; border-radius: 4px; }
+
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5); cursor: pointer; }
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px !important;
+}
+
+@keyframes noderun {
+  0%, 100% { box-shadow: 0 0 0 3px #facc1544, 0 0 20px #facc1533; }
+  50% { box-shadow: 0 0 0 6px #facc1522, 0 0 32px #facc1555; }
+}
+.node-running { animation: noderun 0.8s ease-in-out infinite; }
